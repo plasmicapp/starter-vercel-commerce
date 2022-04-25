@@ -6,6 +6,7 @@ import {
   DefaultNavbarProps
 } from "./plasmic/next_js_commerce/PlasmicNavbar";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
+import router from "next/router";
 
 // Your component props start with props for variants and slots you defined
 // in Plasmic, but you can add more here, like event handlers that you can
@@ -38,7 +39,16 @@ function Navbar_(props: NavbarProps, ref: HTMLElementRefOf<"div">) {
   // By default, we are just piping all NavbarProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicNavbar root={{ ref }} {...props} />;
+  return <PlasmicNavbar root={{ ref }} {...props}
+    textInput={{
+      onKeyUp: (e) => {
+        if (e.key === "enter" || e.keyCode === 13) {
+          const target = e.target as HTMLInputElement;
+          router.push(`/search?query=${target.value}`);
+        }
+      }
+    }} 
+  />;
 }
 
 const Navbar = React.forwardRef(Navbar_);

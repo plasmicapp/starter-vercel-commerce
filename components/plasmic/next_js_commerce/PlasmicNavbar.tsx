@@ -35,7 +35,6 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavItem from "../../NavItem"; // plasmic-import: pflHqo5_0S051/component
-import SearchLink from "../../code-components/SearchLink"; // plasmic-import: OjVZcvy3IwZTte/codeComponent
 import { CategoryCollection } from "@plasmicpkgs/commerce"; // plasmic-import: u4JDWkLumjaUpM/codeComponent
 import { CategoryLink } from "@plasmicpkgs/commerce"; // plasmic-import: ujLcAUEA7LtaTl/codeComponent
 import { CategoryField } from "@plasmicpkgs/commerce"; // plasmic-import: k5ikEyqhoXasz6/codeComponent
@@ -68,7 +67,6 @@ export const PlasmicNavbar__ArgProps = new Array<ArgPropType>("query");
 export type PlasmicNavbar__OverridesType = {
   root?: p.Flex<"div">;
   link?: p.Flex<"a"> & Partial<LinkProps>;
-  searchLink?: p.Flex<typeof SearchLink>;
   categoryCollection?: p.Flex<typeof CategoryCollection>;
   categoryLink?: p.Flex<typeof CategoryLink>;
   categoryField?: p.Flex<typeof CategoryField>;
@@ -131,14 +129,7 @@ function PlasmicNavbar__RenderFunc(props: {
           </p.PlasmicLink>
 
           <NavItem className={classNames("__wab_instance", sty.navItem__vYrmf)}>
-            <SearchLink
-              data-plasmic-name={"searchLink"}
-              data-plasmic-override={overrides.searchLink}
-              className={classNames("__wab_instance", sty.searchLink)}
-              searchPage={"/search" as const}
-            >
-              {"All"}
-            </SearchLink>
+            {"All"}
           </NavItem>
 
           <CategoryCollection
@@ -233,7 +224,6 @@ const PlasmicDescendants = {
   root: [
     "root",
     "link",
-    "searchLink",
     "categoryCollection",
     "categoryLink",
     "categoryField",
@@ -242,7 +232,6 @@ const PlasmicDescendants = {
     "cart"
   ],
   link: ["link"],
-  searchLink: ["searchLink"],
   categoryCollection: ["categoryCollection", "categoryLink", "categoryField"],
   categoryLink: ["categoryLink", "categoryField"],
   categoryField: ["categoryField"],
@@ -255,7 +244,6 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   link: "a";
-  searchLink: typeof SearchLink;
   categoryCollection: typeof CategoryCollection;
   categoryLink: typeof CategoryLink;
   categoryField: typeof CategoryField;
@@ -321,7 +309,6 @@ export const PlasmicNavbar = Object.assign(
   {
     // Helper components rendering sub-elements
     link: makeNodeComponent("link"),
-    searchLink: makeNodeComponent("searchLink"),
     categoryCollection: makeNodeComponent("categoryCollection"),
     categoryLink: makeNodeComponent("categoryLink"),
     categoryField: makeNodeComponent("categoryField"),

@@ -6,6 +6,7 @@ import {
   DefaultNavItemProps
 } from "./plasmic/next_js_commerce/PlasmicNavItem";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
+import { useRouter } from "next/router";
 
 // Your component props start with props for variants and slots you defined
 // in Plasmic, but you can add more here, like event handlers that you can
@@ -38,7 +39,50 @@ function NavItem_(props: NavItemProps, ref: HTMLElementRefOf<"div">) {
   // By default, we are just piping all NavItemProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicNavItem root={{ ref }} {...props} />;
+  const { queryParam } = props;
+  const router = useRouter();
+  let newParams: {query?: string, category?: string, sort?: string} = {};
+  const urlParams = new URLSearchParams(queryParam);
+  if (queryParam) {
+    const currentParams = router.query;
+    if (urlParams.has("query")) {
+      newParams = { query: urlParams.get("query")! }
+    } else if (urlParams.has("sort")) {
+      newParams = {
+        ...(["query", "category"].reduce((obj, q) => (
+          q in currentParams
+          ? { ...obj, [q]: currentParams[q]}
+          : obj
+        ), {})),
+        sort: urlParams.get("sort")!
+      }
+    } else if (urlParams.has("category")) {
+      newParams = {
+        ...(["sort"].reduce((obj, q) => (
+          q in currentParams
+          ? { ...obj, [q]: currentParams[q] }
+          : obj
+        ), {})),
+        category: urlParams.get("category")!
+      }
+    }
+  }
+
+  const isActive = Array.from(urlParams.keys()).every(key => urlParams.get(key) === router.query[key]);
+  return <PlasmicNavItem root={{ ref }} {...props} 
+    onClick={() => {
+      if (queryParam) {
+        router.push(`/search${
+          "category" in newParams
+          ? "/" + newParams.category
+          : ""
+        }?${["query", "sort"].map(q =>
+            q in newParams ? `${q}=${(newParams as any)[q]}` : undefined
+          ).filter(q => !!q).join("&")
+        }`)
+      }
+    }
+  } />;
 }
 
 const NavItem = React.forwardRef(NavItem_);

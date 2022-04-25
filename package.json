@@ -12,9 +12,16 @@
     "@plasmicapp/cli": "^0.1.178",
     "@plasmicapp/host": "^1.0.40",
     "@plasmicapp/react-web": "^0.2.95",
+    "@plasmicpkgs/commerce": "^0.0.13",
+    "@plasmicpkgs/commerce-shopify": "^0.0.15",
+    "@react-spring/web": "^9.4.4",
+    "antd": "^4.20.0",
+    "keen-slider": "^6.6.10",
     "next": "12.1.5",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-fast-marquee": "^1.3.1",
+    "react-use-measure": "^2.1.1"
   },
   "devDependencies": {
     "@types/node": "17.0.26",
