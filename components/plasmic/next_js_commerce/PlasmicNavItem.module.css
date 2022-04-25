@@ -1,0 +1,38 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.slotTargetChildren {
+  font-size: 18px;
+  color: var(--token-qKhMu66CwSx);
+}
+.slotTargetChildrenisActive > .__wab_text,
+.slotTargetChildrenisActive > .__wab_slot-string-wrapper,
+.slotTargetChildrenisActive > .__wab_slot > .__wab_text,
+.slotTargetChildrenisActive > .__wab_slot > .__wab_slot-string-wrapper,
+.slotTargetChildrenisActive > .__wab_slot > .__wab_slot > .__wab_text,
+.slotTargetChildrenisActive
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot-string-wrapper,
+.slotTargetChildrenisActive
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_text,
+.slotTargetChildrenisActive
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot-string-wrapper {
+  text-decoration-line: underline;
+}
+.root:hover .slotTargetChildren {
+  color: var(--token-iR8SeEwQZ);
+}
