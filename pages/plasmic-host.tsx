@@ -33,8 +33,8 @@ export default function PlasmicHost() {
 
 import { registerAll } from "@plasmicpkgs/commerce";
 import { registerAll as registerAll2 } from "@plasmicpkgs/commerce-shopify";
-registerAll();
-registerAll2();
+//registerAll();
+//registerAll2();
 
 registerAddToCart();
 registerCollapse();
