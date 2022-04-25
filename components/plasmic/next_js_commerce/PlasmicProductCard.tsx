@@ -34,10 +34,10 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { ProductLink } from "@plasmicpkgs/commerce"; // plasmic-import: Map-vyFnvMYd7q/codeComponent
-import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: 84UgBqHFxPIhs-/codeComponent
-import { ProductPriceComponent } from "@plasmicpkgs/commerce"; // plasmic-import: XvTwhW0s3Kk17X/codeComponent
-import { ProductMedia } from "@plasmicpkgs/commerce"; // plasmic-import: -UOzUaRq8HUSum/codeComponent
+import { ProductLink } from "@plasmicpkgs/commerce"; // plasmic-import: t362fgW6eiCe/codeComponent
+import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: S1F4q0wN6b/codeComponent
+import { ProductPriceComponent } from "@plasmicpkgs/commerce"; // plasmic-import: _PaJxGc8gf/codeComponent
+import { ProductMedia } from "@plasmicpkgs/commerce"; // plasmic-import: qpULM0wwWW/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -129,6 +129,7 @@ function PlasmicProductCard__RenderFunc(props: {
         sty.root,
         {
           [sty.rootcolor_black]: hasVariant(variants, "color", "black"),
+          [sty.rootcolor_pink]: hasVariant(variants, "color", "pink"),
           [sty.rootcolor_violet]: hasVariant(variants, "color", "violet"),
           [sty.rootcolor_white]: hasVariant(variants, "color", "white"),
           [sty.rootimageUrl]: hasVariant(variants, "imageUrl", "imageUrl"),
@@ -139,58 +140,173 @@ function PlasmicProductCard__RenderFunc(props: {
       <ProductLink
         data-plasmic-name={"productLink"}
         data-plasmic-override={overrides.productLink}
-        className={classNames("__wab_instance", sty.productLink)}
+        className={classNames("__wab_instance", sty.productLink, {
+          [sty.productLinkshape_slim]: hasVariant(variants, "shape", "slim")
+        })}
         linkDest={"/product/{slug}" as const}
       >
-        {true ? (
-          <div
-            className={classNames(projectcss.all, sty.freeBox__vXl1L, {
-              [sty.freeBoxcolor_black__vXl1LUtNNd]: hasVariant(
-                variants,
-                "color",
-                "black"
-              ),
-              [sty.freeBoxcolor_violet__vXl1L0Pz3W]: hasVariant(
-                variants,
-                "color",
-                "violet"
-              ),
-              [sty.freeBoxcolor_white__vXl1Ld3TlB]: hasVariant(
-                variants,
-                "color",
-                "white"
-              ),
-              [sty.freeBoxshape_slim__vXl1LLbo9M]: hasVariant(
-                variants,
-                "shape",
-                "slim"
-              )
-            })}
-          >
-            {(hasVariant(variants, "shape", "slim") ? true : true) ? (
-              <div
-                className={classNames(projectcss.all, sty.freeBox___5VqkM, {
-                  [sty.freeBoxcolor_black___5VqkMUtNNd]: hasVariant(
-                    variants,
-                    "color",
-                    "black"
-                  ),
-                  [sty.freeBoxcolor_violet___5VqkM0Pz3W]: hasVariant(
-                    variants,
-                    "color",
-                    "violet"
-                  ),
-                  [sty.freeBoxcolor_white___5VqkMd3TlB]: hasVariant(
+        <div
+          className={classNames(projectcss.all, sty.freeBox__ksiqw, {
+            [sty.freeBoxcolor_violet__ksiqw0Pz3W]: hasVariant(
+              variants,
+              "color",
+              "violet"
+            ),
+            [sty.freeBoxhideWishlist__ksiqwIfIsz]: hasVariant(
+              variants,
+              "hideWishlist",
+              "hideWishlist"
+            ),
+            [sty.freeBoximageUrl__ksiqw6V69E]: hasVariant(
+              variants,
+              "imageUrl",
+              "imageUrl"
+            ),
+            [sty.freeBoxshape_slim__ksiqwLbo9M]: hasVariant(
+              variants,
+              "shape",
+              "slim"
+            )
+          })}
+        >
+          {(hasVariant(variants, "shape", "slim") ? true : true) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__mdmf, {
+                [sty.freeBoxhideWishlist__mdmfIfIsz]: hasVariant(
+                  variants,
+                  "hideWishlist",
+                  "hideWishlist"
+                ),
+                [sty.freeBoximageUrl__mdmf6V69E]: hasVariant(
+                  variants,
+                  "imageUrl",
+                  "imageUrl"
+                ),
+                [sty.freeBoxshape_slim__mdmfLbo9M]: hasVariant(
+                  variants,
+                  "shape",
+                  "slim"
+                )
+              })}
+            >
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__k8Pk, {
+                  [sty.freeBoxcolor_white__k8PkD3TlB]: hasVariant(
                     variants,
                     "color",
                     "white"
                   ),
-                  [sty.freeBoximageUrl___5VqkM6V69E]: hasVariant(
+                  [sty.freeBoxhideWishlist__k8PkIfIsz]: hasVariant(
+                    variants,
+                    "hideWishlist",
+                    "hideWishlist"
+                  ),
+                  [sty.freeBoximageUrl__k8Pk6V69E]: hasVariant(
+                    variants,
+                    "imageUrl",
+                    "imageUrl"
+                  )
+                })}
+              >
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__mLwH, {
+                    [sty.freeBoxhideWishlist__mLwHIfIsz]: hasVariant(
+                      variants,
+                      "hideWishlist",
+                      "hideWishlist"
+                    )
+                  })}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__rfkrp)}
+                  >
+                    {p.renderPlasmicSlot({
+                      defaultContents: (
+                        <ProductTextField
+                          className={classNames(
+                            "__wab_instance",
+                            sty.productTextField__eBbs6
+                          )}
+                          field={"name" as const}
+                        />
+                      ),
+
+                      value: args.children
+                    })}
+                  </div>
+
+                  {(
+                    hasVariant(variants, "hideWishlist", "hideWishlist")
+                      ? true
+                      : true
+                  ) ? (
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox__o602G,
+                        {
+                          [sty.freeBoxhideWishlist__o602GIfIsz]: hasVariant(
+                            variants,
+                            "hideWishlist",
+                            "hideWishlist"
+                          )
+                        }
+                      )}
+                    >
+                      <WishlistIcon
+                        data-plasmic-name={"svg"}
+                        data-plasmic-override={overrides.svg}
+                        className={classNames(projectcss.all, sty.svg, {
+                          [sty.svgcolor_white]: hasVariant(
+                            variants,
+                            "color",
+                            "white"
+                          )
+                        })}
+                        role={"img"}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+
+                <div className={classNames(projectcss.all, sty.freeBox__ab5Sk)}>
+                  {(
+                    hasVariant(variants, "hidePrice", "hidePrice") ? true : true
+                  ) ? (
+                    <ProductPriceComponent
+                      data-plasmic-name={"productPrice"}
+                      data-plasmic-override={overrides.productPrice}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.productPrice,
+                        {
+                          [sty.productPricecolor_white]: hasVariant(
+                            variants,
+                            "color",
+                            "white"
+                          ),
+                          [sty.productPricehidePrice]: hasVariant(
+                            variants,
+                            "hidePrice",
+                            "hidePrice"
+                          )
+                        }
+                      )}
+                    />
+                  ) : null}
+                </div>
+              </p.Stack>
+
+              <div
+                className={classNames(projectcss.all, sty.freeBox___1Kp1D, {
+                  [sty.freeBoximageUrl___1Kp1D6V69E]: hasVariant(
                     variants,
                     "imageUrl",
                     "imageUrl"
                   ),
-                  [sty.freeBoxshape_slim___5VqkMLbo9M]: hasVariant(
+                  [sty.freeBoxshape_slim___1Kp1DLbo9M]: hasVariant(
                     variants,
                     "shape",
                     "slim"
@@ -198,331 +314,146 @@ function PlasmicProductCard__RenderFunc(props: {
                 })}
               >
                 {true ? (
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__v4DS, {
-                      [sty.freeBoxcolor_black__v4DSUtNNd]: hasVariant(
-                        variants,
-                        "color",
-                        "black"
-                      ),
-                      [sty.freeBoxhideWishlist__v4DSIfIsz]: hasVariant(
-                        variants,
-                        "hideWishlist",
-                        "hideWishlist"
-                      )
-                    })}
-                  >
-                    {true ? (
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__hYvQx,
-                          {
-                            [sty.freeBoxcolor_black__hYvQxUtNNd]: hasVariant(
-                              variants,
-                              "color",
-                              "black"
-                            ),
-                            [sty.freeBoxhideWishlist__hYvQxIfIsz]: hasVariant(
-                              variants,
-                              "hideWishlist",
-                              "hideWishlist"
-                            ),
-                            [sty.freeBoximageUrl__hYvQx6V69E]: hasVariant(
-                              variants,
-                              "imageUrl",
-                              "imageUrl"
-                            )
-                          }
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ig6M0,
-                            {
-                              [sty.freeBoxcolor_violet__ig6M00Pz3W]: hasVariant(
-                                variants,
-                                "color",
-                                "violet"
-                              ),
-                              [sty.freeBoxhideWishlist__ig6M0IfIsz]: hasVariant(
-                                variants,
-                                "hideWishlist",
-                                "hideWishlist"
-                              )
-                            }
-                          )}
-                        >
-                          {p.renderPlasmicSlot({
-                            defaultContents: (
-                              <ProductTextField
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.productTextField__pT2P
-                                )}
-                                field={"name" as const}
-                              />
-                            ),
-
-                            value: args.children
-                          })}
-                        </div>
-
-                        {(
-                          hasVariant(variants, "hideWishlist", "hideWishlist")
-                            ? true
-                            : true
-                        ) ? (
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___6Vksr,
-                              {
-                                [sty.freeBoxcolor_black___6VksrUtNNd]:
-                                  hasVariant(variants, "color", "black"),
-                                [sty.freeBoxhideWishlist___6VksrIfIsz]:
-                                  hasVariant(
-                                    variants,
-                                    "hideWishlist",
-                                    "hideWishlist"
-                                  ),
-                                [sty.freeBoximageUrl___6Vksr6V69E]: hasVariant(
-                                  variants,
-                                  "imageUrl",
-                                  "imageUrl"
-                                )
-                              }
-                            )}
-                          >
-                            <WishlistIcon
-                              data-plasmic-name={"svg"}
-                              data-plasmic-override={overrides.svg}
-                              className={classNames(projectcss.all, sty.svg, {
-                                [sty.svgcolor_black]: hasVariant(
-                                  variants,
-                                  "color",
-                                  "black"
-                                ),
-                                [sty.svgcolor_white]: hasVariant(
-                                  variants,
-                                  "color",
-                                  "white"
-                                ),
-                                [sty.svghideWishlist]: hasVariant(
-                                  variants,
-                                  "hideWishlist",
-                                  "hideWishlist"
-                                )
-                              })}
-                              role={"img"}
-                            />
-                          </div>
-                        ) : null}
-                      </div>
-                    ) : null}
-                    {true ? (
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__caWdz,
-                          {
-                            [sty.freeBoxcolor_violet__caWdz0Pz3W]: hasVariant(
-                              variants,
-                              "color",
-                              "violet"
-                            ),
-                            [sty.freeBoxhidePrice__caWdzxQazN]: hasVariant(
-                              variants,
-                              "hidePrice",
-                              "hidePrice"
-                            )
-                          }
-                        )}
-                      >
-                        {(
-                          hasVariant(variants, "hidePrice", "hidePrice")
-                            ? true
-                            : true
-                        ) ? (
-                          <ProductPriceComponent
-                            data-plasmic-name={"productPrice"}
-                            data-plasmic-override={overrides.productPrice}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.productPrice,
-                              {
-                                [sty.productPricecolor_violet]: hasVariant(
-                                  variants,
-                                  "color",
-                                  "violet"
-                                ),
-                                [sty.productPricehidePrice]: hasVariant(
-                                  variants,
-                                  "hidePrice",
-                                  "hidePrice"
-                                )
-                              }
-                            )}
-                          />
-                        ) : null}
-                      </div>
-                    ) : null}
-                  </p.Stack>
-                ) : null}
-                {true ? (
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__tIxR, {
-                      [sty.freeBoxcolor_violet__tIxR0Pz3W]: hasVariant(
-                        variants,
-                        "color",
-                        "violet"
-                      ),
-                      [sty.freeBoximageUrl__tIxR6V69E]: hasVariant(
+                    className={classNames(projectcss.all, sty.freeBox__j7Ru7, {
+                      [sty.freeBoximageUrl__j7Ru76V69E]: hasVariant(
                         variants,
                         "imageUrl",
                         "imageUrl"
                       )
                     })}
                   >
-                    {true ? (
+                    {(
+                      hasVariant(variants, "imageUrl", "imageUrl") ? true : true
+                    ) ? (
+                      <ProductMedia
+                        className={classNames(
+                          "__wab_instance",
+                          sty.productMedia__od7Uo,
+                          {
+                            [sty.productMediacolor_black__od7UoUtNNd]:
+                              hasVariant(variants, "color", "black"),
+                            [sty.productMediacolor_pink__od7UOsKuQd]:
+                              hasVariant(variants, "color", "pink"),
+                            [sty.productMediacolor_violet__od7Uo0Pz3W]:
+                              hasVariant(variants, "color", "violet"),
+                            [sty.productMediacolor_white__od7Uod3TlB]:
+                              hasVariant(variants, "color", "white"),
+                            [sty.productMediahidePrice__od7UoxQazN]: hasVariant(
+                              variants,
+                              "hidePrice",
+                              "hidePrice"
+                            ),
+                            [sty.productMediahideWishlist__od7UoIfIsz]:
+                              hasVariant(
+                                variants,
+                                "hideWishlist",
+                                "hideWishlist"
+                              ),
+                            [sty.productMediaimageUrl__od7Uo6V69E]: hasVariant(
+                              variants,
+                              "imageUrl",
+                              "imageUrl"
+                            ),
+                            [sty.productMediashape_slim__od7UoLbo9M]:
+                              hasVariant(variants, "shape", "slim")
+                          }
+                        )}
+                      />
+                    ) : null}
+                    {(
+                      hasVariant(variants, "imageUrl", "imageUrl") ? true : true
+                    ) ? (
                       <div
+                        data-plasmic-name={"imageContainer"}
+                        data-plasmic-override={overrides.imageContainer}
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__kURiR,
+                          sty.imageContainer,
                           {
-                            [sty.freeBoximageUrl__kURiR6V69E]: hasVariant(
+                            [sty.imageContainerimageUrl]: hasVariant(
                               variants,
                               "imageUrl",
                               "imageUrl"
                             )
                           }
                         )}
-                      >
-                        {(
-                          hasVariant(variants, "imageUrl", "imageUrl")
-                            ? true
-                            : true
-                        ) ? (
-                          <ProductMedia
-                            className={classNames(
-                              "__wab_instance",
-                              sty.productMedia__ib1F5,
-                              {
-                                [sty.productMediahideWishlist__ib1F5IfIsz]:
-                                  hasVariant(
-                                    variants,
-                                    "hideWishlist",
-                                    "hideWishlist"
-                                  ),
-                                [sty.productMediaimageUrl__ib1F56V69E]:
-                                  hasVariant(variants, "imageUrl", "imageUrl")
-                              }
-                            )}
-                          />
-                        ) : null}
-                        {(
-                          hasVariant(variants, "imageUrl", "imageUrl")
-                            ? true
-                            : true
-                        ) ? (
-                          <div
-                            data-plasmic-name={"imageContainer"}
-                            data-plasmic-override={overrides.imageContainer}
-                            className={classNames(
-                              projectcss.all,
-                              sty.imageContainer,
-                              {
-                                [sty.imageContainerimageUrl]: hasVariant(
-                                  variants,
-                                  "imageUrl",
-                                  "imageUrl"
-                                )
-                              }
-                            )}
-                          />
-                        ) : null}
-                      </div>
+                      />
                     ) : null}
                   </div>
                 ) : null}
               </div>
-            ) : null}
-            {(hasVariant(variants, "shape", "slim") ? true : true) ? (
+            </div>
+          ) : null}
+          {(hasVariant(variants, "shape", "slim") ? true : true) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox___37FWi, {
+                [sty.freeBoxshape_slim___37FWiLbo9M]: hasVariant(
+                  variants,
+                  "shape",
+                  "slim"
+                )
+              })}
+            >
               <div
-                className={classNames(projectcss.all, sty.freeBox__lYkFv, {
-                  [sty.freeBoxshape_slim__lYkFvLbo9M]: hasVariant(
+                className={classNames(projectcss.all, sty.freeBox__rewxf, {
+                  [sty.freeBoxshape_slim__rewxfLbo9M]: hasVariant(
                     variants,
                     "shape",
                     "slim"
                   )
                 })}
               >
-                {(hasVariant(variants, "shape", "slim") ? true : true) ? (
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__sCWP, {
-                      [sty.freeBoxshape_slim__sCWPLbo9M]: hasVariant(
+                <ProductMedia
+                  className={classNames(
+                    "__wab_instance",
+                    sty.productMedia__hn8Hq,
+                    {
+                      [sty.productMediashape_slim__hn8HqLbo9M]: hasVariant(
                         variants,
                         "shape",
                         "slim"
                       )
-                    })}
-                  >
-                    <ProductMedia
-                      className={classNames(
-                        "__wab_instance",
-                        sty.productMedia__ktuCl,
-                        {
-                          [sty.productMediashape_slim__ktuClLbo9M]: hasVariant(
-                            variants,
-                            "shape",
-                            "slim"
-                          )
-                        }
-                      )}
-                    />
-                  </div>
-                ) : null}
-
-                <div
-                  className={classNames(projectcss.all, sty.freeBox__woLne, {
-                    [sty.freeBoxshape_slim__woLneLbo9M]: hasVariant(
-                      variants,
-                      "shape",
-                      "slim"
-                    )
-                  })}
-                >
-                  <ProductTextField
-                    data-plasmic-name={"productTextField"}
-                    data-plasmic-override={overrides.productTextField}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.productTextField,
-                      {
-                        [sty.productTextFieldshape_slim]: hasVariant(
-                          variants,
-                          "shape",
-                          "slim"
-                        ),
-                        [sty.productTextFieldshape_slim_color_black]:
-                          hasVariant(variants, "shape", "slim") &&
-                          hasVariant(variants, "color", "black")
-                      }
-                    )}
-                    field={
-                      hasVariant(variants, "shape", "slim")
-                        ? ("name" as const)
-                        : undefined
                     }
-                  />
-                </div>
+                  )}
+                />
               </div>
-            ) : null}
-          </div>
-        ) : null}
+
+              <div
+                className={classNames(projectcss.all, sty.freeBox__taxSm, {
+                  [sty.freeBoxshape_slim__taxSmLbo9M]: hasVariant(
+                    variants,
+                    "shape",
+                    "slim"
+                  ),
+                  [sty.freeBoxshape_slim_color_black__taxSmLbo9MUtNNd]:
+                    hasVariant(variants, "shape", "slim") &&
+                    hasVariant(variants, "color", "black")
+                })}
+              >
+                <ProductTextField
+                  data-plasmic-name={"productTextField"}
+                  data-plasmic-override={overrides.productTextField}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.productTextField,
+                    {
+                      [sty.productTextFieldshape_slim]: hasVariant(
+                        variants,
+                        "shape",
+                        "slim"
+                      ),
+                      [sty.productTextFieldshape_slim_color_black]:
+                        hasVariant(variants, "shape", "slim") &&
+                        hasVariant(variants, "color", "black")
+                    }
+                  )}
+                  field={"name" as const}
+                />
+              </div>
+            </div>
+          ) : null}
+        </div>
       </ProductLink>
     </div>
   ) as React.ReactElement | null;

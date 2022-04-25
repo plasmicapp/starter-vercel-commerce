@@ -36,9 +36,9 @@ import {
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: RYN9c2WQmTlJA/component
 import ProductGrid from "../../ProductGrid"; // plasmic-import: 2H8_-Jd25igKZ/component
-import { ProductBox } from "@plasmicpkgs/commerce"; // plasmic-import: IIjALUY38UxWl2/codeComponent
+import { ProductBox } from "@plasmicpkgs/commerce"; // plasmic-import: 1gYJf_XBZUAD/codeComponent
 import ProductCard from "../../ProductCard"; // plasmic-import: FvHW5jBcyeTo6/component
-import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: 84UgBqHFxPIhs-/codeComponent
+import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: S1F4q0wN6b/codeComponent
 import ReactFastMarquee from "../../code-components/ReactFastMarquee"; // plasmic-import: GPE0NlN9XsWg-/codeComponent
 import Hero from "../../Hero"; // plasmic-import: bMAhaNV4uxtZt/component
 
@@ -115,46 +115,43 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames("__wab_instance", sty.productGrid___8Z1E)}
             product0={
               <ProductBox
-                className={classNames("__wab_instance", sty.productBox__muRR)}
+                className={classNames("__wab_instance", sty.productBox__ytzBo)}
                 id={"gid://shopify/Product/5447322697892" as const}
-                noLayout={false}
               >
                 <ProductCard
-                  className={classNames("__wab_instance", sty.productCard__fQ)}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.productCard__mNaU
+                  )}
                   color={"violet" as const}
-                  imageIndex={0 as const}
                 />
               </ProductBox>
             }
             product1={
               <ProductBox
-                className={classNames("__wab_instance", sty.productBox__fcgXa)}
+                className={classNames("__wab_instance", sty.productBox__apHt)}
                 id={"gid://shopify/Product/5447323156644" as const}
-                noLayout={false}
               >
                 <ProductCard
                   className={classNames(
                     "__wab_instance",
-                    sty.productCard__db7R5
+                    sty.productCard__ntX02
                   )}
                   color={"white" as const}
-                  imageIndex={0 as const}
                 />
               </ProductBox>
             }
             product2={
               <ProductBox
-                className={classNames("__wab_instance", sty.productBox___4FiRd)}
+                className={classNames("__wab_instance", sty.productBox__pxd4N)}
                 id={"gid://shopify/Product/5447323812004" as const}
-                noLayout={false}
               >
                 <ProductCard
                   className={classNames(
                     "__wab_instance",
-                    sty.productCard__jsqUc
+                    sty.productCard__tGgh
                   )}
                   color={"pink" as const}
-                  imageIndex={0 as const}
                 />
               </ProductBox>
             }
@@ -181,14 +178,14 @@ function PlasmicHomepage__RenderFunc(props: {
                     <ProductBox
                       className={classNames(
                         "__wab_instance",
-                        sty.productBox__bCg60
+                        sty.productBox__bKxwe
                       )}
                       id={"gid://shopify/Product/5447322697892" as const}
                     >
                       <ProductCard
                         className={classNames(
                           "__wab_instance",
-                          sty.productCard__ivLWv
+                          sty.productCard__voEnl
                         )}
                         shape={"slim" as const}
                       />
@@ -202,14 +199,14 @@ function PlasmicHomepage__RenderFunc(props: {
                     <ProductBox
                       className={classNames(
                         "__wab_instance",
-                        sty.productBox__flSbm
+                        sty.productBox__gUigv
                       )}
                       id={"gid://shopify/Product/5447323156644" as const}
                     >
                       <ProductCard
                         className={classNames(
                           "__wab_instance",
-                          sty.productCard__qpBc8
+                          sty.productCard__v85RJ
                         )}
                         shape={"slim" as const}
                       />
@@ -223,14 +220,14 @@ function PlasmicHomepage__RenderFunc(props: {
                     <ProductBox
                       className={classNames(
                         "__wab_instance",
-                        sty.productBox__kbjpQ
+                        sty.productBox__yzwwf
                       )}
                       id={"gid://shopify/Product/5447323812004" as const}
                     >
                       <ProductCard
                         className={classNames(
                           "__wab_instance",
-                          sty.productCard___51N1H
+                          sty.productCard__l3ZyN
                         )}
                         shape={"slim" as const}
                       />
@@ -252,49 +249,43 @@ function PlasmicHomepage__RenderFunc(props: {
             layout={"b" as const}
             product0={
               <ProductBox
-                className={classNames("__wab_instance", sty.productBox___2Jc)}
+                className={classNames("__wab_instance", sty.productBox__aUq98)}
                 id={"gid://shopify/Product/5447322697892" as const}
-                noLayout={false}
               >
                 <ProductCard
                   className={classNames(
                     "__wab_instance",
-                    sty.productCard__sFu8S
+                    sty.productCard__dljv
                   )}
                   color={"violet" as const}
-                  imageIndex={0 as const}
                 />
               </ProductBox>
             }
             product1={
               <ProductBox
-                className={classNames("__wab_instance", sty.productBox__xuQA)}
+                className={classNames("__wab_instance", sty.productBox__v9UD1)}
                 id={"gid://shopify/Product/5447323156644" as const}
-                noLayout={false}
               >
                 <ProductCard
                   className={classNames(
                     "__wab_instance",
-                    sty.productCard___80GQr
+                    sty.productCard__cc9Je
                   )}
                   color={"white" as const}
-                  imageIndex={0 as const}
                 />
               </ProductBox>
             }
             product2={
               <ProductBox
-                className={classNames("__wab_instance", sty.productBox__fkLVi)}
+                className={classNames("__wab_instance", sty.productBox__xSjtV)}
                 id={"gid://shopify/Product/5447323812004" as const}
-                noLayout={false}
               >
                 <ProductCard
                   className={classNames(
                     "__wab_instance",
-                    sty.productCard__vNTjk
+                    sty.productCard__odrGe
                   )}
                   color={"pink" as const}
-                  imageIndex={0 as const}
                 />
               </ProductBox>
             }
@@ -309,26 +300,26 @@ function PlasmicHomepage__RenderFunc(props: {
               <ReactFastMarquee
                 className={classNames(
                   "__wab_instance",
-                  sty.reactFastMarquee__skiHg
+                  sty.reactFastMarquee___3PXDx
                 )}
                 gradient={false}
               >
                 {true ? (
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__by5ZT)}
+                    className={classNames(projectcss.all, sty.freeBox__bWcxb)}
                     test={"test" as const}
                   >
                     <ProductBox
                       className={classNames(
                         "__wab_instance",
-                        sty.productBox__orUkj
+                        sty.productBox__vKFq
                       )}
                       id={"gid://shopify/Product/5447324270756" as const}
                     >
                       <ProductCard
                         className={classNames(
                           "__wab_instance",
-                          sty.productCard__dtTLd
+                          sty.productCard___9UtKn
                         )}
                         color={"black" as const}
                         shape={"slim" as const}
@@ -343,14 +334,14 @@ function PlasmicHomepage__RenderFunc(props: {
                     <ProductBox
                       className={classNames(
                         "__wab_instance",
-                        sty.productBox___1OmSy
+                        sty.productBox__nMpU4
                       )}
                       id={"gid://shopify/Product/5447324729508" as const}
                     >
                       <ProductCard
                         className={classNames(
                           "__wab_instance",
-                          sty.productCard__tSwR8
+                          sty.productCard__d1QW
                         )}
                         color={"black" as const}
                         shape={"slim" as const}
@@ -365,14 +356,14 @@ function PlasmicHomepage__RenderFunc(props: {
                     <ProductBox
                       className={classNames(
                         "__wab_instance",
-                        sty.productBox__uj1Yw
+                        sty.productBox__duASx
                       )}
                       id={"gid://shopify/Product/5447325024420" as const}
                     >
                       <ProductCard
                         className={classNames(
                           "__wab_instance",
-                          sty.productCard__iiQxo
+                          sty.productCard__dkzOz
                         )}
                         color={"black" as const}
                         shape={"slim" as const}

@@ -35,14 +35,14 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: RYN9c2WQmTlJA/component
-import { ProductBox } from "@plasmicpkgs/commerce"; // plasmic-import: IIjALUY38UxWl2/codeComponent
+import { ProductBox } from "@plasmicpkgs/commerce"; // plasmic-import: 1gYJf_XBZUAD/codeComponent
 import ProductFetch from "../../code-components/ProductFetch"; // plasmic-import: PbQNtbGBVlwcEt/codeComponent
 import ProductSlider from "../../code-components/ProductSlider"; // plasmic-import: GZRqvwA8u1vg4x/codeComponent
 import { ProductOptions } from "../../code-components/ProductOptions"; // plasmic-import: yRie_2rn7yFLAC/codeComponent
 import { ProductOptionsDisplayName } from "../../code-components/ProductOptions"; // plasmic-import: kXV6DC7llQSkF8/codeComponent
 import { ProductOptionsValues } from "../../code-components/ProductOptions"; // plasmic-import: Zquf1a7fstpqom/codeComponent
 import { ProductOptionsValueLabel } from "../../code-components/ProductOptions"; // plasmic-import: _PHRkDzgGccJz7/codeComponent
-import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: 84UgBqHFxPIhs-/codeComponent
+import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: S1F4q0wN6b/codeComponent
 import AddToCart from "../../code-components/AddToCart"; // plasmic-import: rVKQEAcUK0Z76k/codeComponent
 import Button from "../../Button"; // plasmic-import: g3ACdRzKBdu_3l/component
 import Collapse from "../../code-components/Collapse"; // plasmic-import: suHT8NS9IShQF0/codeComponent
@@ -76,7 +76,6 @@ export type PlasmicProduct__OverridesType = {
   productOptions?: p.Flex<typeof ProductOptions>;
   productOptionsDisplayName?: p.Flex<typeof ProductOptionsDisplayName>;
   productOptionsValues?: p.Flex<typeof ProductOptionsValues>;
-  svg?: p.Flex<"svg">;
   productTextField?: p.Flex<typeof ProductTextField>;
   addToCart?: p.Flex<typeof AddToCart>;
   button?: p.Flex<typeof Button>;
@@ -143,7 +142,7 @@ function PlasmicProduct__RenderFunc(props: {
                 data-plasmic-override={overrides.columns}
                 className={classNames(projectcss.all, sty.columns)}
               >
-                <div className={classNames(projectcss.all, sty.column__lA9O)}>
+                <div className={classNames(projectcss.all, sty.column__isNaI)}>
                   <ProductSlider
                     data-plasmic-name={"productSlider"}
                     data-plasmic-override={overrides.productSlider}
@@ -152,7 +151,7 @@ function PlasmicProduct__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__wsLoh
+                          sty.freeBox__erJWm
                         )}
                       />
                     }
@@ -160,7 +159,7 @@ function PlasmicProduct__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__xQeip
+                          sty.freeBox__mIf4Q
                         )}
                       />
                     }
@@ -170,10 +169,10 @@ function PlasmicProduct__RenderFunc(props: {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.column__wyHC)}
+                  className={classNames(projectcss.all, sty.column___29Xxe)}
                 >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__rNt9K)}
+                    className={classNames(projectcss.all, sty.freeBox__nozXo)}
                   >
                     <ProductOptions
                       data-plasmic-name={"productOptions"}
@@ -197,7 +196,7 @@ function PlasmicProduct__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__m8PqB
+                          sty.freeBox__eSRua
                         )}
                       >
                         <ProductOptionsValues
@@ -207,28 +206,21 @@ function PlasmicProduct__RenderFunc(props: {
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.freeBox__iKTiP
+                                sty.freeBox__pn2M7
                               )}
-                            >
-                              <ChecksvgIcon
-                                data-plasmic-name={"svg"}
-                                data-plasmic-override={overrides.svg}
-                                className={classNames(projectcss.all, sty.svg)}
-                                role={"img"}
-                              />
-                            </div>
+                            />
                           }
                           activeTextOption={
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.freeBox__lIiPu
+                                sty.freeBox___9JzyP
                               )}
                             >
                               <ProductOptionsValueLabel
                                 className={classNames(
                                   "__wab_instance",
-                                  sty.productOptionsValueLabel__cScg
+                                  sty.productOptionsValueLabel__u3OKe
                                 )}
                               />
                             </div>
@@ -241,7 +233,7 @@ function PlasmicProduct__RenderFunc(props: {
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.freeBox__bA4Z
+                                sty.freeBox__rLSg
                               )}
                             />
                           }
@@ -253,13 +245,13 @@ function PlasmicProduct__RenderFunc(props: {
                             <div
                               className={classNames(
                                 projectcss.all,
-                                sty.freeBox___0X40
+                                sty.freeBox___1KHmt
                               )}
                             >
                               <ProductOptionsValueLabel
                                 className={classNames(
                                   "__wab_instance",
-                                  sty.productOptionsValueLabel__k7Fwv
+                                  sty.productOptionsValueLabel__dGJq1
                                 )}
                               />
                             </div>
@@ -294,69 +286,32 @@ function PlasmicProduct__RenderFunc(props: {
                     </Button>
                   </AddToCart>
 
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__qbgu6)}
-                  >
-                    <Collapse
-                      className={classNames(
-                        "__wab_instance",
-                        sty.collapse__zL88F
-                      )}
-                      initialIsActive={false}
-                      title={"Care" as const}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__xd0Qt
-                        )}
-                      >
-                        {
-                          "This is a limited edition production run. Printing starts when the drop ends."
-                        }
-                      </div>
-                    </Collapse>
-                  </div>
-
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__cviSw)}
-                  >
-                    <Collapse
-                      className={classNames(
-                        "__wab_instance",
-                        sty.collapse__b7O8I
-                      )}
-                      initialIsActive={false}
-                      title={"Details" as const}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___7WlS
-                        )}
-                      >
-                        {
-                          "This is a limited edition production run. Printing starts when the drop ends. Reminder: Bad Boys For Life. Shipping may take 10+ days due to COVID-19."
-                        }
-                      </div>
-                    </Collapse>
-                  </div>
-
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__rJCea)}
-                  >
+                  {true ? (
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__bPp05
-                      )}
+                      className={classNames(projectcss.all, sty.freeBox__qetBz)}
                     >
-                      {"Enter some text"}
+                      <Collapse
+                        className={classNames(
+                          "__wab_instance",
+                          sty.collapse__n1PfD
+                        )}
+                        title={"Care" as const}
+                      />
                     </div>
-                  </div>
+                  ) : null}
+                  {true ? (
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__tWvVs)}
+                    >
+                      <Collapse
+                        className={classNames(
+                          "__wab_instance",
+                          sty.collapse__dwiSj
+                        )}
+                        title={"Details" as const}
+                      />
+                    </div>
+                  ) : null}
                 </p.Stack>
               </div>
             </ProductFetch>
@@ -378,7 +333,6 @@ const PlasmicDescendants = {
     "productOptions",
     "productOptionsDisplayName",
     "productOptionsValues",
-    "svg",
     "productTextField",
     "addToCart",
     "button"
@@ -392,7 +346,6 @@ const PlasmicDescendants = {
     "productOptions",
     "productOptionsDisplayName",
     "productOptionsValues",
-    "svg",
     "productTextField",
     "addToCart",
     "button"
@@ -404,7 +357,6 @@ const PlasmicDescendants = {
     "productOptions",
     "productOptionsDisplayName",
     "productOptionsValues",
-    "svg",
     "productTextField",
     "addToCart",
     "button"
@@ -415,7 +367,6 @@ const PlasmicDescendants = {
     "productOptions",
     "productOptionsDisplayName",
     "productOptionsValues",
-    "svg",
     "productTextField",
     "addToCart",
     "button"
@@ -424,12 +375,10 @@ const PlasmicDescendants = {
   productOptions: [
     "productOptions",
     "productOptionsDisplayName",
-    "productOptionsValues",
-    "svg"
+    "productOptionsValues"
   ],
   productOptionsDisplayName: ["productOptionsDisplayName"],
-  productOptionsValues: ["productOptionsValues", "svg"],
-  svg: ["svg"],
+  productOptionsValues: ["productOptionsValues"],
   productTextField: ["productTextField"],
   addToCart: ["addToCart", "button"],
   button: ["button"]
@@ -447,7 +396,6 @@ type NodeDefaultElementType = {
   productOptions: typeof ProductOptions;
   productOptionsDisplayName: typeof ProductOptionsDisplayName;
   productOptionsValues: typeof ProductOptionsValues;
-  svg: "svg";
   productTextField: typeof ProductTextField;
   addToCart: typeof AddToCart;
   button: typeof Button;
@@ -518,7 +466,6 @@ export const PlasmicProduct = Object.assign(
     productOptions: makeNodeComponent("productOptions"),
     productOptionsDisplayName: makeNodeComponent("productOptionsDisplayName"),
     productOptionsValues: makeNodeComponent("productOptionsValues"),
-    svg: makeNodeComponent("svg"),
     productTextField: makeNodeComponent("productTextField"),
     addToCart: makeNodeComponent("addToCart"),
     button: makeNodeComponent("button"),

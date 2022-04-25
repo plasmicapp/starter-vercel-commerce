@@ -311,71 +311,6 @@
           "componentImportPath": "./components/code-components/ProductSlider"
         },
         {
-          "id": "R7kmbGw9oLDCFR",
-          "name": "ProductCollection",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "84UgBqHFxPIhs-",
-          "name": "ProductTextField",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "XvTwhW0s3Kk17X",
-          "name": "ProductPriceComponent",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "-UOzUaRq8HUSum",
-          "name": "ProductMedia",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "S9lsqPS6EP450P",
-          "name": "CartComponent",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "dKeX5Co4wnlmuQ",
-          "name": "AddToCartButton",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "f31KvaIFroAFg1",
-          "name": "ProductQuantity",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "zZBNMODrbYl0p2",
-          "name": "ProductVariantPicker",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "IIjALUY38UxWl2",
-          "name": "ProductBox",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "Map-vyFnvMYd7q",
-          "name": "ProductLink",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "u4JDWkLumjaUpM",
-          "name": "CategoryCollection",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "k5ikEyqhoXasz6",
-          "name": "CategoryField",
-          "componentImportPath": "@plasmicpkgs/commerce"
-        },
-        {
-          "id": "ecVu7XoFDWFGLZ",
-          "name": "ShopifyProviderComponent",
-          "componentImportPath": "@plasmicpkgs/commerce-shopify"
-        },
-        {
           "id": "PbQNtbGBVlwcEt",
           "name": "ProductFetch",
           "componentImportPath": "./components/code-components/ProductFetch"
@@ -389,23 +324,108 @@
           "id": "rVKQEAcUK0Z76k",
           "name": "AddToCart",
           "componentImportPath": "./components/code-components/AddToCart"
-        },
+        }
+      ]
+    },
+    {
+      "projectId": "i3z63WaCLuRiSZRBwZC8d1",
+      "projectApiToken": "vFDcPRRkeIndudbVPzzJ6XYFTPaQbbUH7viVQRfVlT6w3AZurCwBghalKWIWYrMiawJ1uBiJ5nGZCgQGR1Tg",
+      "projectName": "commerce-shopify",
+      "version": "4.0.2",
+      "cssFilePath": "plasmic/commerce_shopify/plasmic_commerce_shopify.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "plasmic/commerce_shopify/PlasmicGlobalContextsProvider.tsx",
+      "codeComponents": [
         {
-          "id": "OjVZcvy3IwZTte",
-          "name": "SearchLink",
-          "componentImportPath": "./components/code-components/SearchLink"
-        },
+          "id": "CSRQMDqlyz3-",
+          "name": "CommerceProviderComponent",
+          "componentImportPath": "@plasmicpkgs/commerce-shopify"
+        }
+      ],
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "xp1p7dmg329XVLHyuEUxD2",
+      "projectApiToken": "lKmNlwaV4Oj0MW88hxVZ5o5DRgZ8MIE6XICXwHEIus3QTO9JqH6779kr2KkJg7S816qbjShlBQ8PzLYAK4Q",
+      "projectName": "commerce",
+      "version": "10.1.0",
+      "cssFilePath": "plasmic/commerce/plasmic_commerce.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
         {
-          "id": "ujLcAUEA7LtaTl",
-          "name": "CategoryLink",
+          "id": "vU2jzVAnFP",
+          "name": "ProductCollection",
           "componentImportPath": "@plasmicpkgs/commerce"
         },
         {
-          "id": "XZ6KlYIYNlHpJ9",
-          "name": "SearchBar",
-          "componentImportPath": "./components/code-components/SearchBar"
+          "id": "S1F4q0wN6b",
+          "name": "ProductTextField",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "_PaJxGc8gf",
+          "name": "ProductPriceComponent",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "qpULM0wwWW",
+          "name": "ProductMedia",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "NR7KYUJmEqx",
+          "name": "AddToCartButton",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "CjfQQrwiHjD",
+          "name": "ProductQuantity",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "i3vHZr7erKX",
+          "name": "ProductVariantPicker",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "UGhhaf1AiUhF",
+          "name": "CartComponent",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "1gYJf_XBZUAD",
+          "name": "ProductBox",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "t362fgW6eiCe",
+          "name": "ProductLink",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "ny07p45F84c_",
+          "name": "CategoryCollection",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "hzqiq--xdG5T",
+          "name": "CategoryField",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "fA0CIfqZOwRH",
+          "name": "CategoryLink",
+          "componentImportPath": "@plasmicpkgs/commerce"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {

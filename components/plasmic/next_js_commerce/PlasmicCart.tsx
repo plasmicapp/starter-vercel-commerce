@@ -34,7 +34,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { CartComponent } from "@plasmicpkgs/commerce"; // plasmic-import: S9lsqPS6EP450P/codeComponent
+import { CartComponent } from "@plasmicpkgs/commerce"; // plasmic-import: UGhhaf1AiUhF/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -107,13 +107,9 @@ function PlasmicCart__RenderFunc(props: {
         <CartComponent
           data-plasmic-name={"cart"}
           data-plasmic-override={overrides.cart}
-          className={classNames("__wab_instance", sty.cart, {
-            [sty.carteditOnly]: hasVariant(variants, "editOnly", "editOnly")
-          })}
+          className={classNames("__wab_instance", sty.cart)}
           field={"Size" as const}
-          hideIfIsEmpty={
-            hasVariant(variants, "editOnly", "editOnly") ? false : true
-          }
+          hideIfIsEmpty={true}
         />
       </div>
     ) : null

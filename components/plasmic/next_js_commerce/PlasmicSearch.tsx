@@ -35,13 +35,13 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: RYN9c2WQmTlJA/component
-import { CategoryCollection } from "@plasmicpkgs/commerce"; // plasmic-import: u4JDWkLumjaUpM/codeComponent
+import { CategoryCollection } from "@plasmicpkgs/commerce"; // plasmic-import: ny07p45F84c_/codeComponent
 import NavItem from "../../NavItem"; // plasmic-import: pflHqo5_0S051/component
-import { CategoryLink } from "@plasmicpkgs/commerce"; // plasmic-import: ujLcAUEA7LtaTl/codeComponent
-import { CategoryField } from "@plasmicpkgs/commerce"; // plasmic-import: k5ikEyqhoXasz6/codeComponent
-import { ProductCollection } from "@plasmicpkgs/commerce"; // plasmic-import: R7kmbGw9oLDCFR/codeComponent
+import { CategoryLink } from "@plasmicpkgs/commerce"; // plasmic-import: fA0CIfqZOwRH/codeComponent
+import { CategoryField } from "@plasmicpkgs/commerce"; // plasmic-import: hzqiq--xdG5T/codeComponent
+import { ProductCollection } from "@plasmicpkgs/commerce"; // plasmic-import: vU2jzVAnFP/codeComponent
 import ProductCard from "../../ProductCard"; // plasmic-import: FvHW5jBcyeTo6/component
-import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: 84UgBqHFxPIhs-/codeComponent
+import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: S1F4q0wN6b/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -154,7 +154,7 @@ function PlasmicSearch__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__boLGh
+                          sty.text__qKq8Q
                         )}
                       >
                         {"No collection found!"}
@@ -165,7 +165,7 @@ function PlasmicSearch__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__pZg46
+                          sty.text__sIu6T
                         )}
                       >
                         {"Loading..."}
@@ -175,7 +175,7 @@ function PlasmicSearch__RenderFunc(props: {
                     <NavItem
                       className={classNames(
                         "__wab_instance",
-                        sty.navItem__mM4DF
+                        sty.navItem__n8G2
                       )}
                     >
                       <CategoryLink
@@ -213,7 +213,7 @@ function PlasmicSearch__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__oPxkY
+                      sty.text___8IgUl
                     )}
                   >
                     {"No product found!"}
@@ -224,7 +224,7 @@ function PlasmicSearch__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__qdc39
+                      sty.text__lptr9
                     )}
                   >
                     {"Loading..."}
@@ -236,7 +236,6 @@ function PlasmicSearch__RenderFunc(props: {
                   data-plasmic-override={overrides.productCard}
                   className={classNames("__wab_instance", sty.productCard)}
                   color={"violet" as const}
-                  hideWishlist={true}
                 >
                   <ProductTextField
                     data-plasmic-name={"productTextField"}

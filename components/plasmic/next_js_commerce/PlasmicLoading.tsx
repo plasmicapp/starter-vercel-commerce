@@ -35,10 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: RYN9c2WQmTlJA/component
-import { CategoryCollection } from "@plasmicpkgs/commerce"; // plasmic-import: u4JDWkLumjaUpM/codeComponent
 import NavItem from "../../NavItem"; // plasmic-import: pflHqo5_0S051/component
-import { CategoryLink } from "@plasmicpkgs/commerce"; // plasmic-import: ujLcAUEA7LtaTl/codeComponent
-import { CategoryField } from "@plasmicpkgs/commerce"; // plasmic-import: k5ikEyqhoXasz6/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -60,9 +57,6 @@ export type PlasmicLoading__OverridesType = {
   root?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
   columns?: p.Flex<"div">;
-  categoryCollection?: p.Flex<typeof CategoryCollection>;
-  categoryLink?: p.Flex<typeof CategoryLink>;
-  categoryField?: p.Flex<typeof CategoryField>;
 };
 
 export interface DefaultLoadingProps {
@@ -127,55 +121,6 @@ function PlasmicLoading__RenderFunc(props: {
               >
                 {"All Categories"}
               </h4>
-
-              <CategoryCollection
-                data-plasmic-name={"categoryCollection"}
-                data-plasmic-override={overrides.categoryCollection}
-                className={classNames("__wab_instance", sty.categoryCollection)}
-                emptyMessage={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__pH0Xm
-                    )}
-                  >
-                    {"No collection found!"}
-                  </div>
-                }
-                loadingMessage={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___8AulE
-                    )}
-                  >
-                    {"Loading..."}
-                  </div>
-                }
-              >
-                <NavItem
-                  className={classNames("__wab_instance", sty.navItem__r0RaU)}
-                >
-                  <CategoryLink
-                    data-plasmic-name={"categoryLink"}
-                    data-plasmic-override={overrides.categoryLink}
-                    className={classNames("__wab_instance", sty.categoryLink)}
-                    linkDest={"/search/{slug}" as const}
-                  >
-                    <CategoryField
-                      data-plasmic-name={"categoryField"}
-                      data-plasmic-override={overrides.categoryField}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.categoryField
-                      )}
-                      field={"name" as const}
-                    />
-                  </CategoryLink>
-                </NavItem>
-              </CategoryCollection>
             </p.Stack>
           ) : null}
         </p.Stack>
@@ -242,19 +187,9 @@ function PlasmicLoading__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "navbar",
-    "columns",
-    "categoryCollection",
-    "categoryLink",
-    "categoryField"
-  ],
+  root: ["root", "navbar", "columns"],
   navbar: ["navbar"],
-  columns: ["columns", "categoryCollection", "categoryLink", "categoryField"],
-  categoryCollection: ["categoryCollection", "categoryLink", "categoryField"],
-  categoryLink: ["categoryLink", "categoryField"],
-  categoryField: ["categoryField"]
+  columns: ["columns"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -263,9 +198,6 @@ type NodeDefaultElementType = {
   root: "div";
   navbar: typeof Navbar;
   columns: "div";
-  categoryCollection: typeof CategoryCollection;
-  categoryLink: typeof CategoryLink;
-  categoryField: typeof CategoryField;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -327,9 +259,6 @@ export const PlasmicLoading = Object.assign(
     // Helper components rendering sub-elements
     navbar: makeNodeComponent("navbar"),
     columns: makeNodeComponent("columns"),
-    categoryCollection: makeNodeComponent("categoryCollection"),
-    categoryLink: makeNodeComponent("categoryLink"),
-    categoryField: makeNodeComponent("categoryField"),
 
     // Metadata about props expected for PlasmicLoading
     internalVariantProps: PlasmicLoading__VariantProps,

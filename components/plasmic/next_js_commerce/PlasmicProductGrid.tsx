@@ -34,9 +34,6 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { ProductBox } from "@plasmicpkgs/commerce"; // plasmic-import: IIjALUY38UxWl2/codeComponent
-import ProductCard from "../../ProductCard"; // plasmic-import: FvHW5jBcyeTo6/component
-import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: 84UgBqHFxPIhs-/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -115,19 +112,7 @@ function PlasmicProductGrid__RenderFunc(props: {
         })}
       >
         {p.renderPlasmicSlot({
-          defaultContents: (
-            <ProductBox
-              className={classNames("__wab_instance", sty.productBox___87Hl7)}
-              noLayout={false}
-            >
-              <ProductCard
-                className={classNames("__wab_instance", sty.productCard__nwhH)}
-                color={"violet" as const}
-                imageIndex={0 as const}
-              />
-            </ProductBox>
-          ),
-
+          defaultContents: null,
           value: args.product0
         })}
       </div>
@@ -138,19 +123,7 @@ function PlasmicProductGrid__RenderFunc(props: {
         })}
       >
         {p.renderPlasmicSlot({
-          defaultContents: (
-            <ProductBox
-              className={classNames("__wab_instance", sty.productBox__ptSl)}
-              noLayout={false}
-            >
-              <ProductCard
-                className={classNames("__wab_instance", sty.productCard__q9M1E)}
-                color={"white" as const}
-                imageIndex={0 as const}
-              />
-            </ProductBox>
-          ),
-
+          defaultContents: null,
           value: args.product1
         })}
       </div>
@@ -161,19 +134,7 @@ function PlasmicProductGrid__RenderFunc(props: {
         })}
       >
         {p.renderPlasmicSlot({
-          defaultContents: (
-            <ProductBox
-              className={classNames("__wab_instance", sty.productBox__kbhrU)}
-              noLayout={false}
-            >
-              <ProductCard
-                className={classNames("__wab_instance", sty.productCard__pqEIb)}
-                color={"pink" as const}
-                imageIndex={0 as const}
-              />
-            </ProductBox>
-          ),
-
+          defaultContents: null,
           value: args.product2
         })}
       </div>

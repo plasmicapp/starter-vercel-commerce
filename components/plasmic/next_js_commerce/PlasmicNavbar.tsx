@@ -35,9 +35,9 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavItem from "../../NavItem"; // plasmic-import: pflHqo5_0S051/component
-import { CategoryCollection } from "@plasmicpkgs/commerce"; // plasmic-import: u4JDWkLumjaUpM/codeComponent
-import { CategoryLink } from "@plasmicpkgs/commerce"; // plasmic-import: ujLcAUEA7LtaTl/codeComponent
-import { CategoryField } from "@plasmicpkgs/commerce"; // plasmic-import: k5ikEyqhoXasz6/codeComponent
+import { CategoryCollection } from "@plasmicpkgs/commerce"; // plasmic-import: ny07p45F84c_/codeComponent
+import { CategoryLink } from "@plasmicpkgs/commerce"; // plasmic-import: fA0CIfqZOwRH/codeComponent
+import { CategoryField } from "@plasmicpkgs/commerce"; // plasmic-import: hzqiq--xdG5T/codeComponent
 import TextInput from "../../TextInput"; // plasmic-import: zd49r9Guz8Zmd/component
 import Cart from "../../Cart"; // plasmic-import: VrqWzl1NfOir6N/component
 
@@ -141,7 +141,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__o8Fw8
+                  sty.text__idKbx
                 )}
               >
                 {"No collection found!"}
@@ -152,7 +152,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text___8ThPd
+                  sty.text__iTkJr
                 )}
               >
                 {"Loading..."}
@@ -161,7 +161,7 @@ function PlasmicNavbar__RenderFunc(props: {
             noLayout={true}
           >
             <NavItem
-              className={classNames("__wab_instance", sty.navItem__wj2BL)}
+              className={classNames("__wab_instance", sty.navItem__u6HLr)}
             >
               <CategoryLink
                 data-plasmic-name={"categoryLink"}
